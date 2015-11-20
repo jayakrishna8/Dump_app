@@ -1,0 +1,14 @@
+<div class='btn-group pull-left user_details' id='keyword_btn'>
+<!--   <span>
+    <%# if obj.present? && obj.updated_at.present? %>
+      <i class='icon-user'></i> <%#= obj.segment.user.username  %>
+      <span> | <%#= obj.updated_at.strftime("%m/%d/%Y") %></span>
+    <%# end %>
+  </span> -->
+  <span>
+    <%# unless current_party.published? %>
+      <%= f.submit 'RESET', class: 'custom btn btn-default', id: 'reset_keyword'%>
+      <%= f.submit 'SAVE' , class: 'custom btn btn-default', id: 'save_keyword' %>
+    <%# end %>
+  </span>
+</div>

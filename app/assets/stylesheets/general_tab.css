@@ -1,0 +1,36 @@
+
+/*-----------------Start profile specific style-------------*/
+.user_details{ margin-top: -3.75% !important; margin-right: 2%;}
+.profile_target_others_input label{margin-left: -1%;}
+.profile_target_other label{width: 4%!important;}
+.profile_customize  label {width: 147px; text-align: left;}
+.profile_services label{text-align: right; width: 6%!important;}
+.width-94{width: 94% !important; min-height: 1px; position: relative; float: left;}
+.break_description {width: 99% !important; word-wrap: break-word; }
+.profile_services {width: 90%!important; float: right; margin-right: -3%;  }
+.profile_effidia_id label.error{margin-left: 32%;}
+.width-60{width: 62.333333%!important;}
+.width-82 {width: 82% !important;}
+.width-72 {width: 72% !important;}
+.width-84 {width: 84% !important;}
+#spidered_profile_count, #profile_desc_count, #datacard_desc_count {float:right; margin-right:2%;}
+#profile_specialities_input {margin-left: 24%;}
+#target_checkobox .checkbox input[type='checkbox']{margin-top: 4px; margin-left: 60%;}
+#profile_speciality_other_id{margin-left: 27%;}
+#site_profile table td label{width: 51%;}
+#site_profile input[type='radio']{ margin-top: 6%;}
+#site_profile{margin-left: 14%;}
+#site_profile label{text-align: left;}
+#site_profile table td:nth-child(4) label{margin-top: 3%;}
+#site_profile table td:nth-child(4) input{margin-top: 4%;}
+#multi_text_display{width: 50px; overflow: scroll;white-space: nowrap;}
+#speciality_error label.error{margin-left: 36%;}
+#target_error label.error{margin-left: -67% !important;margin-top: 4%;}
+label.error{width:60%!important; margin-left: 16%;}
+/*-----------------End profile specific style-------------*/
+
+/*-----------------------CSS For keywords and Notes Segment------------------------------*/
+.user_details_keyword_and_notes{margin-top: -3.75%;}
+.save_keyword_and_notes{margin-top: -10px;}
+.label-left label {text-align: left;}
+/*-----------------------End of CSS For CSS For keywords and Notes Segment---------------------*/

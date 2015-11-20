@@ -1,0 +1,23 @@
+<% unless @keywords.nil? %>
+  <table class="mrgn_lft_6">
+    <% @keywords.each do |keyword| %>
+      <tr>
+        <%#= content_tag_for(:tr, keyword) do %>
+          <td>
+            <span>
+            <%= keyword.keyword %>
+                <%#= truncate(keyword.keyword, length: 30) %>
+            </span>
+          </td>
+          <td>&nbsp;&nbsp;</td>
+          <%# unless current_party.published? %>
+            <td> <%= link_to 'Edit Keyword', edit_keyword_path(keyword), remote: true %></td>
+            <td><%= link_to 'Delete', keyword_path(keyword), remote: 'true', method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <%# else %>
+            <!-- <td colspan="2"></td> -->
+          <%# end %>
+        <%# end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
