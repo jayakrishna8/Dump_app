@@ -1,0 +1,42 @@
+<% @data_aq_note ||= DataAqNote.new %>
+<%= simple_form_for(@data_aq_note, remote: true,html: {class: 'customize_simple_form label-left' ,id: 'form_data_aq_notes'}) do |f| %>
+    <%= render 'shared/user_detail_for_segment', obj: @data_aq_note, segment: 'data_aq_note',f: f %>
+    <div id='data_aq_note_flash_notice' class='collapse'></div>
+    <div id='notes_errors'></div>
+    <div class='clear_with_height'></div>
+
+    <%= f.input :high_priority, as: :text, input_html: {class: 'form-control col-xs-10 text_area_resizing',
+                                                        rows: '3', id: 'high_priority'} %>
+    <div id='dialog-message' title='High Priority' class="collapse"><%= @data_aq_note.high_priority if @data_aq_note.high_priority.present? %></div>
+    <div class='clear_with_height'></div>
+    <%= f.input :normal_priority, as: :text, input_html: {class: 'form-control col-xs-10 text_area_resizing',
+                                                          rows: '3', id: 'normal_priority'}, label: 'Low priority' %>
+    <div class='clear_with_height'></div>
+
+    <%= label_tag 'Date'%>
+    <%= text_field_tag :updated_at, nil, value: (@data_aq_note.updated_at.present? ? @data_aq_note.updated_at.strftime('%m/%d/%Y') : '') ,
+                       class: 'form-control col-xs-2' %>
+    <%= hidden_field_tag :segment_detail_id, sub_seg.id %>
+<% end %>
+
+<script>
+    //form should not be editable if party is get published
+    <% if current_party.published? %>
+    $('#form_data_aq_notes :input').prop('disabled', true);
+    <% end %>
+    $('#updated_at').prop('disabled', true);
+    $('#reset_data_aq_notes').click(function(){
+        $('#data_aq_note_form form')[0].reset();
+    });
+
+    //Preventing  form submission with jquery if all the field is empty
+    $(function() {
+        $('#save_data_aq_notes').click(function() {
+            if($('#high_priority').val().length < 1 && $('#normal_priority').val().length < 1 ) {
+                $('#notes_errors').fadeIn(300).addClass('alert alert-danger')
+                        .html('Blank Submission Not Allowed. Please fill at-least one field. ').delay(1500).fadeOut(300);
+                return false;
+            }
+        });
+    });
+</script>

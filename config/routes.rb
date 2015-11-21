@@ -3,7 +3,11 @@ DumpApp::Application.routes.draw do
 resources :users
 resources :keywords
 resources :projects
+resources :data_aq_notes
+resources :dnt_platforms
+resources :dm_dnets
 root :to => "keywords#index"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

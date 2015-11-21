@@ -39,9 +39,9 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 gem 'devise', '1.1.rc0'
-
+gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
+# gem 'cancan', '~> 1.10'
 # Use debugger
 # gem 'debugger', group: [:development, :test]

@@ -3,64 +3,34 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
  *= require bootstrap/bootstrap
- *= require production_tab
- *= require dms_home
- *= require ie-only
- *= require general_tab
+ *= require bootstrap/bootstrap
  */
 
-body {
-
-  padding-top: 100px;
+.customize_simple_form label {
+    float: left;
+    width: 102px;
+    text-align: right;
+    margin: 2px 10px;
 }
 
-.form-group input {
-    width:300px;
+.clear_with_height{ clear:both; height: 10px; }
+
+.align_center{
+margin-left: 35%;
+color:blue ;
+font-size: 43px;
 }
 
-.form-group select {
-    width:200px;
+.header{
+  background-color:red;
 }
-
-/*
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
-*/
-
-select.date-select {
-  width:auto;
-  border: 1px solid #cccccc;
-  background-color: #ffffff;
-  display: inline;
-}
-
-.fieldset {
-  border:1px solid #ccc;
-  padding:10px;
-}
-
-.legend {
-  font-size: 1.2em !important;
-  font-weight: bold !important;
-  text-align: left !important;
-  width: auto;
-  padding:0 10px;
-  border-bottom:none;
-
-}
-
-
-/* navbar styles */
-/*.active {
- background-color:blue; // Change the color 
-}*/

@@ -1,0 +1,35 @@
+<div id='data_aq_note_form'>
+  <%= render 'data_aq_notes/form', sub_seg:  sub_seg %>
+</div>
+
+<script>
+    $(document).ready(function(){
+        <% unless @data_aq_note.high_priority.blank?  %>
+        <% unless params[:hide_popup].present? %>
+        $(function() {
+            $('#dialog-message').show();
+            $('#dialog-message').dialog({
+                modal: true,
+                resizable: false,
+                width: '40%',
+                height: '300',
+                closeOnEscape: false,
+                open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+            });
+            setTimeout(function(){
+                if($('#dialog-message').dialog( "isOpen" )){
+                    $('#dialog-message').dialog({
+                        buttons: {
+                            Ok: function() {
+                                $(this).dialog( "close" );
+                            }
+                        }
+                    });
+                    $(".ui-dialog-titlebar-close").show();
+                }
+            }, 20000);
+        });
+        <% end %>
+        <% end %>
+    });
+</script>

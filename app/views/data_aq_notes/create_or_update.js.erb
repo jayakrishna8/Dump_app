@@ -1,0 +1,7 @@
+$('#data_aq_note_flash_notice, #data_aq_note_errors').hide();
+<% if @data_aq_note.errors.any? -%>
+  $('#data_aq_note_errors').html("<%= j render 'shared/errors/errors', object:  @data_aq_note %>").show();
+<% else -%>
+  $('#data_aq_note_form').html("<%= j render 'data_aq_notes/form', sub_seg: @sub_seg %>");
+  $('#data_aq_note_flash_notice').html("<%= j render 'shared/flash_mesg' %>").show(300).delay(1000).hide(300);
+<% end -%>
